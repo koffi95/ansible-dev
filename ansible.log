@@ -1,0 +1,59 @@
+2023-09-25 23:57:44,684 p=7324 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-09-25 23:57:46,266 p=7324 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-09-26 00:36:57,143 p=4635 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-09-26 00:36:57,421 p=4635 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-09-26 00:44:45,708 p=4760 u=ec2-user n=ansible | Encryption successful
+2023-09-26 00:45:50,090 p=4828 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inventory.yml with auto plugin: Attempting to decrypt but no vault secrets found
+
+2023-09-26 00:45:50,090 p=4828 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inventory.yml with yaml plugin: Attempting to decrypt but no vault secrets found
+
+2023-09-26 00:45:50,091 p=4828 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inventory.yml with ini plugin: Attempting to decrypt but no vault secrets found
+
+2023-09-26 00:45:50,091 p=4828 u=ec2-user n=ansible | [WARNING]: Unable to parse /home/ec2-user/ansible-dev/inventory.yml as an inventory source
+
+2023-09-26 00:45:50,091 p=4828 u=ec2-user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-09-26 00:47:33,323 p=4916 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-09-26 00:47:33,528 p=4916 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-09-26 00:49:11,360 p=5017 u=ec2-user n=ansible | Reading ciphertext input from stdin
+2023-09-26 00:50:09,133 p=5017 u=ec2-user n=ansible |  [ERROR]: User interrupted execution
+
+2023-09-26 00:50:25,637 p=5105 u=ec2-user n=ansible | Decryption successful
+2023-09-26 00:52:03,717 p=5174 u=ec2-user n=ansible | Encryption successful
+2023-09-26 00:53:28,854 p=5340 u=ec2-user n=ansible | Decryption successful
