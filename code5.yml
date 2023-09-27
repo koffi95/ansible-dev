@@ -11,4 +11,4 @@
         insertafter: '^module-store ='
         state: absent
         line: module-store = sergio
-        #create: yes
+        #create: yes sir

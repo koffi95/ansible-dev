@@ -1,59 +1,210 @@
-2023-09-25 23:57:44,684 p=7324 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
+2023-09-26 22:55:18,106 p=4097 u=ec2-user n=ansible | ERROR! Hosts list cannot be empty. Please check your playbook
+2023-09-26 22:57:31,120 p=4208 u=ec2-user n=ansible | playbook: patch1.yml
+2023-09-26 22:57:45,980 p=4235 u=ec2-user n=ansible | 172.31.21.71 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).",
+    "unreachable": true
+}
+2023-09-26 22:57:47,839 p=4235 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3"
     },
     "changed": false,
     "ping": "pong"
 }
-2023-09-25 23:57:46,266 p=7324 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python3.7"
-    },
-    "changed": false,
-    "ping": "pong"
-}
-2023-09-26 00:36:57,143 p=4635 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python3.7"
-    },
-    "changed": false,
-    "ping": "pong"
-}
-2023-09-26 00:36:57,421 p=4635 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
+2023-09-26 22:58:30,926 p=4305 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3"
     },
     "changed": false,
     "ping": "pong"
 }
-2023-09-26 00:44:45,708 p=4760 u=ec2-user n=ansible | Encryption successful
-2023-09-26 00:45:50,090 p=4828 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inventory.yml with auto plugin: Attempting to decrypt but no vault secrets found
-
-2023-09-26 00:45:50,090 p=4828 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inventory.yml with yaml plugin: Attempting to decrypt but no vault secrets found
-
-2023-09-26 00:45:50,091 p=4828 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible-dev/inventory.yml with ini plugin: Attempting to decrypt but no vault secrets found
-
-2023-09-26 00:45:50,091 p=4828 u=ec2-user n=ansible | [WARNING]: Unable to parse /home/ec2-user/ansible-dev/inventory.yml as an inventory source
-
-2023-09-26 00:45:50,091 p=4828 u=ec2-user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
-
-2023-09-26 00:47:33,323 p=4916 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
+2023-09-26 22:58:33,489 p=4305 u=ec2-user n=ansible | 172.31.21.71 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3.7"
     },
     "changed": false,
     "ping": "pong"
 }
-2023-09-26 00:47:33,528 p=4916 u=ec2-user n=ansible | 172.31.32.116 | SUCCESS => {
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python3"
-    },
-    "changed": false,
-    "ping": "pong"
-}
-2023-09-26 00:49:11,360 p=5017 u=ec2-user n=ansible | Reading ciphertext input from stdin
-2023-09-26 00:50:09,133 p=5017 u=ec2-user n=ansible |  [ERROR]: User interrupted execution
+2023-09-26 22:59:12,484 p=4424 u=ec2-user n=ansible | PLAY [Update and Reboot Servers] ************************************************************************************************************************************
+2023-09-26 22:59:12,504 p=4424 u=ec2-user n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************
+2023-09-26 22:59:14,991 p=4424 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-26 22:59:15,003 p=4424 u=ec2-user n=ansible | TASK [Update YUM (Red Hat/CentOS)] **********************************************************************************************************************************
+2023-09-26 22:59:19,123 p=4424 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-26 22:59:19,131 p=4424 u=ec2-user n=ansible | TASK [Update APT (Debian/Ubuntu)] ***********************************************************************************************************************************
+2023-09-26 22:59:19,146 p=4424 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-26 22:59:19,168 p=4424 u=ec2-user n=ansible | TASK [Reboot the server] ********************************************************************************************************************************************
+2023-09-26 22:59:19,184 p=4424 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-26 22:59:19,200 p=4424 u=ec2-user n=ansible | TASK [Wait for server to come back up] ******************************************************************************************************************************
+2023-09-26 22:59:19,735 p=4424 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-26 22:59:19,749 p=4424 u=ec2-user n=ansible | PLAY RECAP **********************************************************************************************************************************************************
+2023-09-26 22:59:19,749 p=4424 u=ec2-user n=ansible | 172.31.21.71               : ok=3    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-09-26 23:09:35,495 p=4989 u=ec2-user n=ansible | PLAY [Update and Reboot Servers] ************************************************************************************************************************************
+2023-09-26 23:09:35,505 p=4989 u=ec2-user n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************
+2023-09-26 23:09:37,125 p=4989 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-26 23:09:37,137 p=4989 u=ec2-user n=ansible | TASK [Update YUM (Red Hat/CentOS)] **********************************************************************************************************************************
+2023-09-26 23:09:53,789 p=4989 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-26 23:09:53,795 p=4989 u=ec2-user n=ansible | TASK [Update APT (Debian/Ubuntu)] ***********************************************************************************************************************************
+2023-09-26 23:09:53,810 p=4989 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-26 23:09:53,818 p=4989 u=ec2-user n=ansible | TASK [Reboot the server] ********************************************************************************************************************************************
+2023-09-26 23:10:45,598 p=4989 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-26 23:10:45,608 p=4989 u=ec2-user n=ansible | TASK [Wait for server to come back up] ******************************************************************************************************************************
+2023-09-26 23:10:46,139 p=4989 u=ec2-user n=ansible | ok: [172.31.21.71 -> localhost]
+2023-09-26 23:10:46,155 p=4989 u=ec2-user n=ansible | PLAY RECAP **********************************************************************************************************************************************************
+2023-09-26 23:10:46,155 p=4989 u=ec2-user n=ansible | 172.31.21.71               : ok=4    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-09-27 00:13:44,851 p=6096 u=ec2-user n=ansible | ERROR! A malformed role declaration was encountered.
 
-2023-09-26 00:50:25,637 p=5105 u=ec2-user n=ansible | Decryption successful
-2023-09-26 00:52:03,717 p=5174 u=ec2-user n=ansible | Encryption successful
-2023-09-26 00:53:28,854 p=5340 u=ec2-user n=ansible | Decryption successful
+The error appears to be in '/home/ec2-user/ansible-dev/site.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: ws
+  ^ here
+
+2023-09-27 00:15:47,548 p=6186 u=ec2-user n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/home/ec2-user/ansible-dev/site.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: ws
+  ^ here
+
+2023-09-27 00:15:54,210 p=6222 u=ec2-user n=ansible | ERROR! A malformed role declaration was encountered.
+
+The error appears to be in '/home/ec2-user/ansible-dev/site.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: ws
+  ^ here
+
+2023-09-27 00:16:58,851 p=6253 u=ec2-user n=ansible | playbook: site.yml
+2023-09-27 00:17:07,353 p=6286 u=ec2-user n=ansible | PLAY [ws] ***********************************************************************************************************************************************************
+2023-09-27 00:17:07,363 p=6286 u=ec2-user n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************
+2023-09-27 00:17:12,228 p=6286 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 00:17:12,246 p=6286 u=ec2-user n=ansible | TASK [apache : install apache] **************************************************************************************************************************************
+2023-09-27 00:17:23,496 p=6286 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-27 00:17:23,505 p=6286 u=ec2-user n=ansible | TASK [apache : Apache service start] ********************************************************************************************************************************
+2023-09-27 00:17:24,880 p=6286 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-27 00:17:24,900 p=6286 u=ec2-user n=ansible | PLAY RECAP **********************************************************************************************************************************************************
+2023-09-27 00:17:24,900 p=6286 u=ec2-user n=ansible | 172.31.21.71               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-09-27 00:50:57,709 p=6514 u=ec2-user n=ansible | Starting galaxy role install process
+2023-09-27 00:50:57,788 p=6514 u=ec2-user n=ansible | - downloading role 'java', owned by geerlingguy
+2023-09-27 00:50:58,042 p=6514 u=ec2-user n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-java/archive/2.3.1.tar.gz
+2023-09-27 00:50:58,124 p=6514 u=ec2-user n=ansible | - extracting geerlingguy.java to /home/ec2-user/ansible-dev/roles/geerlingguy.java
+2023-09-27 00:50:58,129 p=6514 u=ec2-user n=ansible | - geerlingguy.java (2.3.1) was installed successfully
+2023-09-27 00:53:00,201 p=6593 u=ec2-user n=ansible | Starting galaxy role install process
+2023-09-27 00:53:00,277 p=6593 u=ec2-user n=ansible | - downloading role 'ntp', owned by geerlingguy
+2023-09-27 00:53:00,641 p=6593 u=ec2-user n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-ntp/archive/2.3.3.tar.gz
+2023-09-27 00:53:00,824 p=6593 u=ec2-user n=ansible | - extracting geerlingguy.ntp to /home/ec2-user/ansible-dev/roles/geerlingguy.ntp
+2023-09-27 00:53:00,830 p=6593 u=ec2-user n=ansible | - geerlingguy.ntp (2.3.3) was installed successfully
+2023-09-27 00:54:54,019 p=6648 u=ec2-user n=ansible | PLAY [ws] ***********************************************************************************************************************************************************
+2023-09-27 00:54:54,037 p=6648 u=ec2-user n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************
+2023-09-27 00:54:55,635 p=6648 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 00:54:55,649 p=6648 u=ec2-user n=ansible | TASK [apache : install apache] **************************************************************************************************************************************
+2023-09-27 00:54:59,307 p=6648 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 00:54:59,314 p=6648 u=ec2-user n=ansible | TASK [apache : Apache service start] ********************************************************************************************************************************
+2023-09-27 00:55:00,434 p=6648 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 00:55:00,448 p=6648 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] **************************************************************************************************
+2023-09-27 00:55:00,472 p=6648 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 00:55:00,481 p=6648 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] ***************************************************************************************************
+2023-09-27 00:55:00,497 p=6648 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 00:55:00,504 p=6648 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ********************************************************************************************************
+2023-09-27 00:55:00,518 p=6648 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 00:55:00,526 p=6648 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ********************************************************************************************************
+2023-09-27 00:55:00,541 p=6648 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 00:55:00,550 p=6648 u=ec2-user n=ansible | TASK [java : Define java_packages.] *********************************************************************************************************************************
+2023-09-27 00:55:00,607 p=6648 u=ec2-user n=ansible | fatal: [172.31.21.71]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: '__java_packages' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible-dev/roles/java/tasks/main.yml': line 25, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Define java_packages.\n  ^ here\n"}
+2023-09-27 00:55:00,609 p=6648 u=ec2-user n=ansible | PLAY RECAP **********************************************************************************************************************************************************
+2023-09-27 00:55:00,609 p=6648 u=ec2-user n=ansible | 172.31.21.71               : ok=3    changed=0    unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+2023-09-27 01:08:44,514 p=6920 u=ec2-user n=ansible | PLAY [ws] ***********************************************************************************************************************************************************
+2023-09-27 01:08:44,528 p=6920 u=ec2-user n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************
+2023-09-27 01:08:46,492 p=6920 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:08:46,504 p=6920 u=ec2-user n=ansible | TASK [apache : install apache] **************************************************************************************************************************************
+2023-09-27 01:08:49,720 p=6920 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:08:49,728 p=6920 u=ec2-user n=ansible | TASK [apache : Apache service start] ********************************************************************************************************************************
+2023-09-27 01:08:50,648 p=6920 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:08:50,662 p=6920 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] **************************************************************************************************
+2023-09-27 01:08:50,677 p=6920 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:08:50,684 p=6920 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Amazon Linux.] *******************************************************************************************************
+2023-09-27 01:08:50,704 p=6920 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:08:50,712 p=6920 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] ***************************************************************************************************
+2023-09-27 01:08:50,725 p=6920 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:08:50,734 p=6920 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ********************************************************************************************************
+2023-09-27 01:08:50,751 p=6920 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:08:50,758 p=6920 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ********************************************************************************************************
+2023-09-27 01:08:50,774 p=6920 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:08:50,781 p=6920 u=ec2-user n=ansible | TASK [java : Define java_packages.] *********************************************************************************************************************************
+2023-09-27 01:08:50,818 p=6920 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:08:50,826 p=6920 u=ec2-user n=ansible | TASK [java : include_tasks] *****************************************************************************************************************************************
+2023-09-27 01:08:50,849 p=6920 u=ec2-user n=ansible | included: /home/ec2-user/ansible-dev/roles/java/tasks/setup-RedHat.yml for 172.31.21.71
+2023-09-27 01:08:50,859 p=6920 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] *****************************************************************************************************************************
+2023-09-27 01:08:52,454 p=6920 u=ec2-user n=ansible | fatal: [172.31.21.71]: FAILED! => {"changed": false, "msg": "No package matching 'java-11-openjdk' found available, installed or updated", "rc": 126, "results": ["No package matching 'java-11-openjdk' found available, installed or updated"]}
+2023-09-27 01:08:52,457 p=6920 u=ec2-user n=ansible | PLAY RECAP **********************************************************************************************************************************************************
+2023-09-27 01:08:52,457 p=6920 u=ec2-user n=ansible | 172.31.21.71               : ok=6    changed=0    unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+2023-09-27 01:11:57,669 p=7087 u=ec2-user n=ansible | PLAY [ws] ***********************************************************************************************************************************************************
+2023-09-27 01:11:57,685 p=7087 u=ec2-user n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************
+2023-09-27 01:11:59,369 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:11:59,387 p=7087 u=ec2-user n=ansible | TASK [apache : install apache] **************************************************************************************************************************************
+2023-09-27 01:12:03,525 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:03,533 p=7087 u=ec2-user n=ansible | TASK [apache : Apache service start] ********************************************************************************************************************************
+2023-09-27 01:12:04,698 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:04,712 p=7087 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] **************************************************************************************************
+2023-09-27 01:12:04,730 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:04,739 p=7087 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Amazon Linux.] *******************************************************************************************************
+2023-09-27 01:12:04,759 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:04,766 p=7087 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] ***************************************************************************************************
+2023-09-27 01:12:04,784 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:04,794 p=7087 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ********************************************************************************************************
+2023-09-27 01:12:04,811 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:04,821 p=7087 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ********************************************************************************************************
+2023-09-27 01:12:04,838 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:04,848 p=7087 u=ec2-user n=ansible | TASK [java : Define java_packages.] *********************************************************************************************************************************
+2023-09-27 01:12:04,907 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:04,926 p=7087 u=ec2-user n=ansible | TASK [java : include_tasks] *****************************************************************************************************************************************
+2023-09-27 01:12:04,987 p=7087 u=ec2-user n=ansible | included: /home/ec2-user/ansible-dev/roles/java/tasks/setup-RedHat.yml for 172.31.21.71
+2023-09-27 01:12:05,004 p=7087 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] *****************************************************************************************************************************
+2023-09-27 01:12:30,808 p=7087 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-27 01:12:30,815 p=7087 u=ec2-user n=ansible | TASK [java : include_tasks] *****************************************************************************************************************************************
+2023-09-27 01:12:30,830 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:30,836 p=7087 u=ec2-user n=ansible | TASK [java : include_tasks] *****************************************************************************************************************************************
+2023-09-27 01:12:30,850 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:30,858 p=7087 u=ec2-user n=ansible | TASK [java : Set JAVA_HOME if configured.] **************************************************************************************************************************
+2023-09-27 01:12:30,876 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:30,889 p=7087 u=ec2-user n=ansible | TASK [ntp : Include OS-specific variables.] *************************************************************************************************************************
+2023-09-27 01:12:30,905 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:30,911 p=7087 u=ec2-user n=ansible | TASK [ntp : Set the ntp_driftfile variable.] ************************************************************************************************************************
+2023-09-27 01:12:30,937 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:30,944 p=7087 u=ec2-user n=ansible | TASK [ntp : Set the ntp_package variable.] **************************************************************************************************************************
+2023-09-27 01:12:30,968 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:30,975 p=7087 u=ec2-user n=ansible | TASK [ntp : Set the ntp_config_file variable.] **********************************************************************************************************************
+2023-09-27 01:12:31,000 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:31,008 p=7087 u=ec2-user n=ansible | TASK [ntp : Set the ntp_daemon variable.] ***************************************************************************************************************************
+2023-09-27 01:12:31,040 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:31,050 p=7087 u=ec2-user n=ansible | TASK [ntp : Ensure NTP package is installed.] ***********************************************************************************************************************
+2023-09-27 01:12:37,932 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:37,938 p=7087 u=ec2-user n=ansible | TASK [ntp : Ensure tzdata package is installed (Linux).] ************************************************************************************************************
+2023-09-27 01:12:39,274 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:39,284 p=7087 u=ec2-user n=ansible | TASK [ntp : Set timezone.] ******************************************************************************************************************************************
+2023-09-27 01:12:40,151 p=7087 u=ec2-user n=ansible | changed: [172.31.21.71]
+2023-09-27 01:12:40,166 p=7087 u=ec2-user n=ansible | TASK [ntp : Populate service facts.] ********************************************************************************************************************************
+2023-09-27 01:12:41,661 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:41,676 p=7087 u=ec2-user n=ansible | TASK [ntp : Disable systemd-timesyncd if it's running but ntp is enabled.] ******************************************************************************************
+2023-09-27 01:12:41,715 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:41,728 p=7087 u=ec2-user n=ansible | TASK [ntp : Ensure NTP is running and enabled as configured.] *******************************************************************************************************
+2023-09-27 01:12:42,331 p=7087 u=ec2-user n=ansible | ok: [172.31.21.71]
+2023-09-27 01:12:42,343 p=7087 u=ec2-user n=ansible | TASK [ntp : Ensure NTP is stopped and disabled as configured.] ******************************************************************************************************
+2023-09-27 01:12:42,370 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:42,381 p=7087 u=ec2-user n=ansible | TASK [ntp : Generate ntp configuration file.] ***********************************************************************************************************************
+2023-09-27 01:12:42,413 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:42,433 p=7087 u=ec2-user n=ansible | RUNNING HANDLER [ntp : restart cron] ********************************************************************************************************************************
+2023-09-27 01:12:42,486 p=7087 u=ec2-user n=ansible | skipping: [172.31.21.71]
+2023-09-27 01:12:42,510 p=7087 u=ec2-user n=ansible | PLAY RECAP **********************************************************************************************************************************************************
+2023-09-27 01:12:42,510 p=7087 u=ec2-user n=ansible | 172.31.21.71               : ok=17   changed=2    unreachable=0    failed=0    skipped=11   rescued=0    ignored=0   
